@@ -122,13 +122,22 @@ export const MintCard = (props) => {
       (mintPrice * 2).toString(),
       "ether"
     );
+    console.log(props?.proof);
     const tx = await contract.boardedOrDoubleMint(2, props?.proof, false, { value: price });
-    const receipt = tx.wait();
+    const receipt = await tx.wait();
     console.log(receipt);
     if (receipt?.status == 1) {
       setIsDisabled(true);
     }
   }
+
+["0x4432eb1448f31a6965476c2f78b56889c3d31720cab63510652242e02b7242fa",
+"0x2830beca5858899dc9f3a5dc138ce564df4c0ce44aeef779d444b1514c2158f6",
+"0x310dc26f5ecce1ee9eed8a1ac9e2d0da29916f454a0065099ba9e52463e3244c",
+"0xf2b31cf11ac55c36d6bc51077130c37f18916ce4bccb737f460cc391b3b4342f",
+"0x817705f96b5b1af10f5c80e02e8a944b6d0353fa0e0c31be84e5a91565b775fd",
+"0x41a3e6680948db48dad9bea8971cf7b1dc3806af8ebd415a22f48d230250f22a"]
+
 
   return (
     <Box
