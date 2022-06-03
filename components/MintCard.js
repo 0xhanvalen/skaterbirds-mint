@@ -92,8 +92,7 @@ export const MintCard = (props) => {
       (mintPrice * amount).toString(),
       "ether"
     );
-    console.log(props?.proof);
-    const tx = await contract.preMint(amount, props?.proof, { value: price });
+    const tx = await contract.preMint(amount, props?.premintProof, { value: price });
     const receipt = await tx.wait();
     console.log(receipt);
     if (receipt?.status == 1) {

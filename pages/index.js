@@ -157,7 +157,7 @@ export default function Home() {
             stage="2"
             contract={contract}
             mintPhase={slot0?.mintPhase}
-            premintStatus={premintStatus} proof={premintProof}
+            premintStatus={premintStatus} premintProof={premintProof}
           >
             <h2
               style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `2.5rem` }}
