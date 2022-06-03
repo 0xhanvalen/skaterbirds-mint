@@ -1299,7 +1299,6 @@ export const premintPublicList = [
   "0x4328d53eed1247a72be28cfd86f1f7303565aa72",
   "0x2ebf0f8beda5da703c5f44b5ab20fa9af572dd51",
   "0x35e7b325f96cf228a500c96dfa9d62644240ca0c",
-  
 ];
 
 export const boardedList = [
@@ -3667,7 +3666,6 @@ export const boardedList = [
   "0x2A407492f6EeC72000BbF5564212De937dee7551",
   "0x576d67f28E41E071F523Ad26c6307c1D81640471",
   "0x8c3C3bEd8583f43F48B7144d201CC749Db79d9F5",
-  "0x2F4F92162510C2400236Ebb20e7d37423dd78282",
 ];
 
 export const doubleList = [
@@ -3793,6 +3791,4 @@ export const doubleList = [
   "0x3Cc8811182b25620769f179772484BCa34616bB0",
   "0x3BEeba367ABA03eab9a0cef2629412fAa12e7B92",
   "0x1f2eb98b4e5a445b166cf152e50c008b85ea17b1",
-  "0x3dCf9b6488A7006fA72310F01e9bE7fC900f1ABA",
-  "0x31AE2c2cAEC2Bc9211cC6E55D73Dc3e874BaBdbb",
 ];
