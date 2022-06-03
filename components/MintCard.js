@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import styles from "./MintCard.module.scss";
 import { useEthers } from "../contexts/EthersProviderContext";
 import { ethers } from "ethers";
+import toast from "react-hot-toast";
 
 export const MintCard = (props) => {
   const { address, isUpdating, signer, provider } = useEthers();
@@ -75,6 +76,7 @@ export const MintCard = (props) => {
   };
 
   const publicMint = async () => {
+    toast("attempting mint...");
     const price = ethers.utils.parseUnits(
       (mintPrice * amountToMint).toString(),
       "ether"
@@ -84,10 +86,12 @@ export const MintCard = (props) => {
     console.log(receipt);
     if (receipt?.status == 1) {
       setIsDisabled(true);
+      toast.success('Successfully minted!');
     }
   };
 
   const preMint = async (amount) => {
+    toast("attempting mint...");
     const price = ethers.utils.parseUnits(
       (mintPrice * amount).toString(),
       "ether"
@@ -97,10 +101,12 @@ export const MintCard = (props) => {
     console.log(receipt);
     if (receipt?.status == 1) {
       setIsDisabled(true);
+      toast.success('Successfully minted!');
     }
   };
 
   const boarderMint = async () => {
+    toast("attempting mint...");
     const price = ethers.utils.parseUnits((0.088).toString(), "ether");
     const tx = await contract.boardedMint(1, props?.boarderProof, {
       value: price,
@@ -109,10 +115,12 @@ export const MintCard = (props) => {
     console.log(receipt);
     if (receipt?.status == 1) {
       setIsDisabled(true);
+      toast.success('Successfully minted!');
     }
   };
 
   const doubleBoarderMint = async (amount) => {
+    toast("attempting mint...");
     const price = ethers.utils.parseUnits((0.088 * amount).toString(), "ether");
     try {
     const tx = await contract.doubleBoardedMint(amount, props?.doubleProof, {
@@ -122,6 +130,7 @@ export const MintCard = (props) => {
     console.log(receipt);
     if (receipt?.status == 1) {
       setIsDisabled(true);
+      toast.success('Successfully minted!');
     }} catch (error) {
       console.error(error);
     }
