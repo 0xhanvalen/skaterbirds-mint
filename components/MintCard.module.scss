@@ -1,0 +1,51 @@
+.decrement {
+    background-color: #FFEEDD;
+    color: black;
+    font-family: 'lazy_dog', sans-serif;
+    padding: 0 1rem;
+    padding-bottom: .75rem;
+    border-radius: 50px 0 0 50px;
+    border: 1px solid black;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.increment {
+    background-color: #FFEEDD;
+    color: black;
+    font-family: 'lazy_dog', sans-serif;
+    padding: 0 1rem;
+    padding-bottom: .75rem;
+    border-radius: 0 50px 50px 0;
+    border: 1px solid black;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.mintAmountDisplay {
+    background-color: #FFEEDD;
+    color: black;
+    font-family: 'lazy_dog', sans-serif;
+    padding: 0 1rem;
+    padding-bottom: .75rem;
+    border: 1px solid black;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.mintButton {
+    background-color: #FFEEDD;
+    color: black;
+    font-family: 'lazy_dog', sans-serif;
+    padding: 1rem 2rem 1.5rem 2rem;
+    border-radius: 50px;
+    border: 1px solid black;
+    font-size: 1rem;
+    line-height: 1;
+    width: 100%;
+    transition: all 0.25s;
+    &:hover {
+        background-color: greenyellow;
+        transform: translateY(-10px);
+    }
+}

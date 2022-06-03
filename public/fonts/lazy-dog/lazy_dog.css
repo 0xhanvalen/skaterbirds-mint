@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'lazy_dog';
+    src: url('fonts/lazy_dog.otf');
+    src: url('fonts/lazy_dog.otf') format('opentype'),
+         url('fonts/lazy_dog.woff') format('woff');
+}

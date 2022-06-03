@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'proxima-alt';
+  src: url('/fonts/proxima-alt/proxima-alt.otf');
+  src: url('/fonts/proxima-alt/proxima-alt.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'outfit';
+  src: url('/fonts/outfit/outfit.ttf');
+  src: url('/fonts/outfit/outfit.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lazy_dog';
+  src: url('/fonts/lazy-dog/lazy_dog.otf');
+  src: url('/fonts/lazy-dog/lazy_dog.woff') format('woff'),
+    url('/fonts/lazy-dog/lazy_dog.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'fc-marshmallow';
+  src: url('/fonts/fc-marshmallow/fc-marshmallow.otf');
+  src: url('/fonts/fc-marshmallow/fc-marshmallow.otf') format('opentype'),
+       url('/fonts/fc-marshmallow/fc-marshmallow.ttf') format('truetype');
+}
+
+
 html,
 body {
   padding: 0;

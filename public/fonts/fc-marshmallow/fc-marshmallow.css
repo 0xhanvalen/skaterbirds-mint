@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'fc-marshmallow';
+    src: url('fonts/fc-marshmallow.otf');
+    src: url('fonts/fc-marshmallow.otf') format('opentype'),
+         url('fonts/fc-marshmallow.ttf') format('truetype');
+}
