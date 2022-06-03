@@ -151,7 +151,7 @@ export const MintCard = (props) => {
         display: `flex`,
         flexDirection: `column`,
         alignItems: `center`,
-        justifyContent: `space-between`,
+        justifyContent: `flex-start`,
         width: `100%`,
       }}
     >

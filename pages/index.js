@@ -39,7 +39,7 @@ export default function Home() {
     }
     if (jsonres?.booleans?.isDouble) {
       setDoubleStatus(true);
-      console.log('double Proof: ', jsonres?.proofs?.doubleHexProof);
+      console.log("double Proof: ", jsonres?.proofs?.doubleHexProof);
       setDoubleProof(jsonres?.proofs?.doubleHexProof);
     }
   }
@@ -140,16 +140,18 @@ export default function Home() {
             contract={contract}
             mintPhase={slot0?.mintPhase}
             boardedStatus={boardedStatus}
-            doubleStatus={doubleStatus} boarderProof={boarderProof} doubleProof={doubleProof}
+            doubleStatus={doubleStatus}
+            boarderProof={boarderProof}
+            doubleProof={doubleProof}
           >
             <h2
               style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `2.5rem` }}
             >
-              Phase 1
+              Presale Mint
             </h2>
             <p style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `1rem` }}>
-              Boarders: 1 SkaterBird for 0.088eth <br />
-              Doubles: up to 2 Skaterbirds for 0.088eth <br />
+              Boarded: 1 SkaterBird for 0.088eth <br />
+              Double Boarded: up to 2 Skaterbirds for 0.088eth <br />
             </p>
             <br />
           </MintCard>
@@ -157,12 +159,13 @@ export default function Home() {
             stage="2"
             contract={contract}
             mintPhase={slot0?.mintPhase}
-            premintStatus={premintStatus} premintProof={premintProof}
+            premintStatus={premintStatus}
+            premintProof={premintProof}
           >
             <h2
               style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `2.5rem` }}
             >
-              Phase 2
+              Raffle Mint
             </h2>
             <p style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `1rem` }}>
               Prelist Mint: 0.125eth!
@@ -173,8 +176,13 @@ export default function Home() {
             <h2
               style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `2.5rem` }}
             >
-              Phase 3
+              Public Mint
             </h2>
+            <h3
+              style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `1.5rem` }}
+            >
+              (if required)
+            </h3>
             <p style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `1rem` }}>
               Public: 0.125eth!
             </p>
