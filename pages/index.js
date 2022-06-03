@@ -13,7 +13,9 @@ export default function Home() {
   const [premintStatus, setPremintStatus] = useState(false);
   const [boardedStatus, setBoardedStatus] = useState(false);
   const [doubleStatus, setDoubleStatus] = useState(false);
-  const [proof, setProof] = useState();
+  const [premintProof, setPremintProof] = useState();
+  const [boarderProof, setBoarderProof] = useState();
+  const [doubleProof, setDoubleProof] = useState();
   const [contract, setContract] = useState();
   const [slot0, setSlot0] = useState();
   const [slot1, setSlot1] = useState();
@@ -27,18 +29,18 @@ export default function Home() {
     const res = await fetch("/api/merkles", req);
     const jsonres = await res.json();
     console.log({ jsonres });
-    console.log("boarder status: ", jsonres?.booleans?.isBoarded);
     if (jsonres?.booleans?.isPremint) {
       setPremintStatus(true);
-      setProof(jsonres?.proofs?.premintHexProof);
+      setPremintProof(jsonres?.proofs?.premintHexProof);
     }
     if (jsonres?.booleans?.isBoarded) {
       setBoardedStatus(true);
-      setProof(jsonres?.proofs?.boardedHexProof);
+      setBoarderProof(jsonres?.proofs?.boardedHexProof);
     }
     if (jsonres?.booleans?.isDouble) {
       setDoubleStatus(true);
-      setProof(jsonres?.proofs?.doubleHexProof);
+      console.log('double Proof: ', jsonres?.proofs?.doubleHexProof);
+      setDoubleProof(jsonres?.proofs?.doubleHexProof);
     }
   }
 
@@ -138,7 +140,7 @@ export default function Home() {
             contract={contract}
             mintPhase={slot0?.mintPhase}
             boardedStatus={boardedStatus}
-            doubleStatus={doubleStatus} proof={proof}
+            doubleStatus={doubleStatus} boarderProof={boarderProof} doubleProof={doubleProof}
           >
             <h2
               style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `2.5rem` }}
@@ -155,7 +157,7 @@ export default function Home() {
             stage="2"
             contract={contract}
             mintPhase={slot0?.mintPhase}
-            premintStatus={premintStatus} proof={proof}
+            premintStatus={premintStatus} proof={premintProof}
           >
             <h2
               style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `2.5rem` }}
