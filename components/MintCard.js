@@ -114,10 +114,8 @@ export const MintCard = (props) => {
 
   const doubleBoarderMint = async (amount) => {
     const price = ethers.utils.parseUnits((0.088 * amount).toString(), "ether");
-    const proof = props?.doubleProof.map((step) => step.toString());
-    console.log({proof});
     try {
-    const tx = await contract.doubleBoardedMint(amount, proof, {
+    const tx = await contract.doubleBoardedMint(amount, props?.doubleProof, {
       value: price,
     });
     const receipt = await tx.wait();
