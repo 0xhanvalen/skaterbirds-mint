@@ -78,7 +78,8 @@ export default function Home() {
           backgroundPosition: `bottom center`,
           width: `100vw`,
           height: `100%`,
-          padding: `2rem`
+          padding: `2rem`,
+          minHeight: `100vh`
         }}
       >
         <Box
