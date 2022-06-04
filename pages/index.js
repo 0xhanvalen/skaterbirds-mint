@@ -71,16 +71,14 @@ export default function Home() {
   return (
     <>
       <Box
+      className={styles.mainContainer}
         sx={{
           backgroundImage: `/images/Mint_page_BG.png`,
           backgroundSize: `cover`,
           backgroundPosition: `bottom center`,
           width: `100vw`,
-          height: `100vh`,
-          position: `fixed`,
-          left: `0`,
-          top: `0`,
-          overflowY: `scroll`,
+          height: `100%`,
+          padding: `2rem`
         }}
       >
         <Box
@@ -88,7 +86,7 @@ export default function Home() {
           sx={{
             backgroundColor: `rgba(65, 159, 255, 1)`,
             width: `80vw`,
-            margin: `2rem auto`,
+            margin: `0 auto`,
             color: `white`,
             padding: `.5rem 2rem`,
             borderRadius: `50px`,
@@ -96,13 +94,12 @@ export default function Home() {
           }}
         >
           <div
+          className={styles.navContainer}
             style={{
-              display: `grid`,
-              gridTemplateColumns: `1fr 1fr 1fr`,
-              placeItems: `center`,
+
             }}
           >
-            <div style={{ placeSelf: "start" }}>
+            <div>
               <Image
                 src="/images/text_logo_4.png"
                 alt="Skater Birds"
@@ -122,14 +119,7 @@ export default function Home() {
             >
               Official Mint Page
             </h1>
-            <div
-              style={{
-                display: `flex`,
-                alignItems: `center`,
-                justifySelf: `end`,
-                gap: `1rem`,
-              }}
-            >
+            <div className={styles.buttonHolder}>
               <WalletButton />
             </div>
           </div>
@@ -189,6 +179,18 @@ export default function Home() {
             <br />
           </MintCard>
         </Box>
+      </Box>
+      <Box name="credits" className={styles.credits}>
+        <h2>
+          Powered by <a href="https://www.matukilabs.io/">Matuki Labs</a>
+        </h2>
+        <br />
+        <Image
+          src="/images/matuki_labs_transparent_white.png"
+          alt="Matuki Labs Launchpad"
+          width="32px"
+          height="32px"
+        />
       </Box>
     </>
   );
