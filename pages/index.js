@@ -159,7 +159,7 @@ export default function Home() {
               Raffle Mint
             </h2>
             <p style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `1rem` }}>
-              Prelist Mint: 0.125eth!
+              Presale Raffle Mint: 0.125eth!
             </p>
             <br />
           </MintCard>
