@@ -11,10 +11,11 @@ function MyApp({ Component, pageProps }) {
         <Head>
           <title>SkaterBirds</title>
           <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-          <meta name="author" content="0xhanvalen" />
+          <meta name="author" content="0xhanvalen via Matuki Labs" />
           <meta
             name="description"
-            content="Skaterbirds are cool and you can mint them here"
+            content="
+            Welcome The Skate Park, Lets Skate Together!"
           />
         </Head>
         <Toaster position="bottom-right" reverseOrder={true} />
