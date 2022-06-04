@@ -81,12 +81,17 @@ export const MintCard = (props) => {
       (mintPrice * amountToMint).toString(),
       "ether"
     );
-    const tx = await contract.publicMint(amountToMint, { value: price });
-    const receipt = await tx.wait();
-    console.log(receipt);
-    if (receipt?.status == 1) {
-      setIsDisabled(true);
-      toast.success('Successfully minted!');
+    try {
+      const tx = await contract.publicMint(amountToMint, { value: price });
+      const receipt = await tx.wait();
+      console.log(receipt);
+      if (receipt?.status == 1) {
+        setIsDisabled(true);
+        toast.success("Successfully minted!");
+      }
+    } catch (error) {
+      toast.error("Something went wrong...");
+      console.log(error);
     }
   };
 
@@ -96,26 +101,38 @@ export const MintCard = (props) => {
       (mintPrice * amount).toString(),
       "ether"
     );
-    const tx = await contract.preMint(amount, props?.premintProof, { value: price });
-    const receipt = await tx.wait();
-    console.log(receipt);
-    if (receipt?.status == 1) {
-      setIsDisabled(true);
-      toast.success('Successfully minted!');
+    try {
+      const tx = await contract.preMint(amount, props?.premintProof, {
+        value: price,
+      });
+      const receipt = await tx.wait();
+      console.log(receipt);
+      if (receipt?.status == 1) {
+        setIsDisabled(true);
+        toast.success("Successfully minted!");
+      }
+    } catch (error) {
+      toast.error("Something went wrong...");
+      console.log(error);
     }
   };
 
   const boarderMint = async () => {
     toast("attempting mint...");
     const price = ethers.utils.parseUnits((0.088).toString(), "ether");
-    const tx = await contract.boardedMint(1, props?.boarderProof, {
-      value: price,
-    });
-    const receipt = await tx.wait();
-    console.log(receipt);
-    if (receipt?.status == 1) {
-      setIsDisabled(true);
-      toast.success('Successfully minted!');
+    try {
+      const tx = await contract.boardedMint(1, props?.boarderProof, {
+        value: price,
+      });
+      const receipt = await tx.wait();
+      console.log(receipt);
+      if (receipt?.status == 1) {
+        setIsDisabled(true);
+        toast.success("Successfully minted!");
+      }
+    } catch (error) {
+      toast.error("Something went wrong...");
+      console.log(error);
     }
   };
 
@@ -123,15 +140,17 @@ export const MintCard = (props) => {
     toast("attempting mint...");
     const price = ethers.utils.parseUnits((0.088 * amount).toString(), "ether");
     try {
-    const tx = await contract.doubleBoardedMint(amount, props?.doubleProof, {
-      value: price,
-    });
-    const receipt = await tx.wait();
-    console.log(receipt);
-    if (receipt?.status == 1) {
-      setIsDisabled(true);
-      toast.success('Successfully minted!');
-    }} catch (error) {
+      const tx = await contract.doubleBoardedMint(amount, props?.doubleProof, {
+        value: price,
+      });
+      const receipt = await tx.wait();
+      console.log(receipt);
+      if (receipt?.status == 1) {
+        setIsDisabled(true);
+        toast.success("Successfully minted!");
+      }
+    } catch (error) {
+      toast.error("Something went wrong...");
       console.error(error);
     }
   };
