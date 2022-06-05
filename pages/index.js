@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </Box>
         <Box name="cards" className={styles.cardGrid}>
-          <MintCard
+          {/* <MintCard
             stage="1"
             contract={contract}
             mintPhase={slot0?.mintPhase}
@@ -162,7 +162,10 @@ export default function Home() {
               Presale Raffle Mint: 0.125eth!
             </p>
             <br />
-          </MintCard>
+          </MintCard> */}
+          <div style={{placeSelf: `center`}}>
+          <Image src="/images/poster1.png" alt="Mint Price Lowered to 0.088! We work with refunds as we cannot change the contract price at this stage." width="256px" height="256px" />
+          </div>
           <MintCard stage="3" contract={contract} mintPhase={slot0?.mintPhase}>
             <h2
               style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `2.5rem` }}
@@ -177,8 +180,12 @@ export default function Home() {
             <p style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `1rem` }}>
               Public: 0.125eth!
             </p>
+            <p style={{ fontFamily: `'Outfit', sans-serif`, fontSize: `1rem` }}><strong>Notice: </strong> Public Mints will be automatically refunded 0.037eth.</p>
             <br />
           </MintCard>
+          <div style={{placeSelf: `center`}}>
+          <Image src="/images/poster2.png" alt="All Mints for 0.125 get a refund of 0.037. We have a script running that refunds automatically." width="256px" height="256px" />
+          </div>
         </Box>
       </Box>
       <Box name="credits" className={styles.credits}>
